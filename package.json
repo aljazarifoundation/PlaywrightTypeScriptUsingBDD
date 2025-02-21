@@ -1,0 +1,23 @@
+{
+  "name": "playwrighttypescriptusingbdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cucumber-js --format json:reports/cucumber_report.json",
+    "generate_json": "npx multiple-cucumber-html-reporter --jsonDir=reports --reportDir=reports/html --reportName='Sauce Demo Report'",
+    "generate_multiplehtml_report": "node report.js",
+    "generate_allure": "allure generate reports/allure-results --clean -o reports/allure-report && allure open reports/allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.4",
+    "allure-cucumberjs": "^3.2.0",
+    "multiple-cucumber-html-reporter": "^3.9.2",
+    "ts-node": "^10.9.2"
+  }
+}
