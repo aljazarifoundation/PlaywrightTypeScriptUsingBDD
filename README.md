@@ -29,13 +29,17 @@ Ensure you have the following installed:
 
 ```
 📂 PlaywrightTypeScriptUsingBDD
- ┣ 📂 features/                # Cucumber feature files
- ┣ 📂 steps/                   # Step definitions (Gherkin steps)
- ┣ 📂 support/                 # Hooks and utility functions
- ┣ 📂 reports/                 # Test reports (HTML & JSON)
- ┣ 📜 package.json             # Dependencies & scripts
- ┣ 📜 playwright.config.ts      # Playwright configuration
- ┗ 📜 README.md                # Documentation
+ ┣ 📂 features/                # Cucumber feature files (Scenarios & Gherkin syntax)
+ ┣ 📂 steps/                   # Step definitions mapping Gherkin steps to Playwright actions
+ ┣ 📂 support/                 # Hooks, utilities, and helper functions for tests
+ ┣ 📂 reports/                 # Generated test reports (HTML & JSON)
+ ┣ 📜 package.json             # Project dependencies & npm scripts
+ ┣ 📜 package-lock.json        # Auto-generated dependency lock file
+ ┣ 📜 report.js                # Script for generating multiple-cucumber-html-reporter
+ ┣ 📜 tsconfig.json            # TypeScript configuration
+ ┣ 📜 cucumber.js              # Cucumber configuration file
+ ┣ 📜 playwright.config.ts     # Playwright test configuration (Browsers, timeouts, etc.)
+ ┗ 📜 README.md                # Documentation and setup instructions
 ```
 
 ## 📝 Writing Tests
@@ -96,12 +100,7 @@ HEADLESS=false npx cucumber-js
 
 ### Generate Multiple Cucumber HTML Report
 ```sh
-npm run report
-```
-
-### Generate Allure Report
-```sh
-npm run allure-report
+"generate_multiplehtml_report": "node report.js",
 ```
 
 ## 🛠 Debugging
