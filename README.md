@@ -110,8 +110,13 @@ If you encounter issues, try:
 ```sh
 npx playwright test --debug
 ```
+## 📹 Video
+
+https://github.com/user-attachments/assets/cc599842-68a4-496b-ad48-9e5f69683567
+
+
 
 ## 📜 License
 This project is licensed under the **MIT License**.
 
-# PlaywrightTypeScriptUsingBDD
+
